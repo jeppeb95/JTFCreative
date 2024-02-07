@@ -50,13 +50,13 @@ header ul li a {
 }
 header ul li .svg-klat {
   position: absolute;
-  left: -25px;
+  left: -45px;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 header ul li:hover .svg-klat {
   opacity: 1;
@@ -85,10 +85,10 @@ header ul li:hover .svg-klat {
   position: relative;
 }
 .adskiller-overskrift img {
-  width: 170px;
+  width: 300px;
   position: absolute;
   left: 20px;
-  top: -100px;
+  top: -130px;
   z-index: 0;
 }
 
