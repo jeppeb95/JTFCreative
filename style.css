@@ -1,0 +1,209 @@
+/* Farve variabler */
+/* Font variabler */
+/*Poisition variable */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*Global text styling */
+h1 {
+  font-family: Stick, sans-serif;
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
+  margin-top: -10px;
+  text-align: center;
+}
+
+h2 {
+  font-family: Stick, sans-serif;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 200;
+  color: #FCEC00;
+}
+
+/*Header styling*/
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+  background: #080808;
+}
+header ul {
+  display: flex;
+  padding: 0 50px;
+  gap: 70px;
+}
+header ul li {
+  list-style: none;
+  position: relative;
+}
+header ul li a {
+  text-decoration: none;
+  color: #FCEC00;
+}
+header ul li .svg-klat {
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  width: 20px;
+  height: 20px;
+}
+header ul li:hover .svg-klat {
+  opacity: 1;
+}
+
+/*Hero styling */
+.hero-section {
+  height: 80vh;
+  background-color: #080808;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section img {
+  width: 200px;
+}
+
+/*Adskiller*/
+.adskiller-overskrift {
+  background: #FCEC00;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.adskiller-overskrift img {
+  width: 170px;
+  position: absolute;
+  left: 20px;
+  top: -100px;
+}
+
+/*Services section */
+.services-section {
+  background: #1C1C1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.services-section .services-box {
+  height: 350px;
+  width: 250px;
+  border: solid 2px #FCEC00;
+  margin: 100px 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.services-section .services-box ul {
+  margin: 0;
+  padding: 15px 40px;
+}
+.services-section .services-box ul li {
+  padding-bottom: 20px;
+}
+
+/*Feedback section */
+.feedback-section {
+  background: #080808;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.feedback-section h1 {
+  color: #FCEC00;
+  padding-top: 20px;
+}
+.feedback-section .kunde-box {
+  width: 28vw;
+  border-radius: 50px;
+  min-height: 270px;
+  background: #FAFFC6;
+  position: relative;
+  margin-top: 150px;
+  padding: 15px;
+}
+.feedback-section .kunde-box .kunde-trekant {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 60px solid #FAFFC6;
+  position: absolute;
+  bottom: -60px;
+  transform: translate(-50%);
+  left: 50%;
+}
+.feedback-section .kunde-box .gul-cirkel {
+  background: #FCEC00;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%);
+  left: 50%;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -80px;
+}
+.feedback-section .kunde-box .gul-cirkel img {
+  border-radius: 50%;
+  width: 93%;
+  height: 93%;
+}
+.feedback-section .kunde-box .kunde-navn {
+  text-align: center;
+  font-weight: 800;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  bottom: 20px;
+  white-space: nowrap;
+}
+.feedback-section .kunde-box .kunde-vurdering {
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  bottom: 0;
+}
+.feedback-section .kunde-box #citation1 {
+  position: absolute;
+  top: 25px;
+}
+.feedback-section .kunde-box #citation2 {
+  position: absolute;
+  right: 15px;
+  bottom: 40px;
+}
+.feedback-section .kunde-box p {
+  padding: 20px 0;
+  padding-bottom: 33px;
+}
+.feedback-section .kunde-box-wrapper {
+  display: flex;
+  gap: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .feedback-section .kunde-box-wrapper {
+    flex-direction: column;
+  }
+  .feedback-section .kunde-box {
+    width: 70vw;
+    min-height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
