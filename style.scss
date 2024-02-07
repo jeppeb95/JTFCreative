@@ -30,6 +30,7 @@ h1 {
     margin: 0;
     margin-top: -10px;
     text-align: center;
+    z-index: 2;
 }
 
 h2 {
@@ -90,7 +91,7 @@ header {
         @include flex-center;
 
         img {
-            width: 200px;
+            width: 20vw;
         }
     }
 
@@ -107,6 +108,7 @@ header {
             position: absolute;
             left: 20px;
             top: -100px;
+            z-index: 0;
         }
     }
 
@@ -115,27 +117,63 @@ header {
         background: $graa;
         @include flex-center;
         gap: 20px;
+        padding: 80px 0;
 
-        .services-box {
-            height: 350px;
-            width: 250px;
-            border: solid 2px $gul;
-            margin: 100px 0;
-            color: white;
-            font-family: $poppins;
-            font-size: 14px;
+        .services-pair {
+            display: flex;
+            gap: 20px;
+        
 
-            ul {
-                margin: 0;
-                padding: 15px 40px;
+            .services-box {
+                height: 350px;
+                width: 250px;
+                border: solid 2px $gul;
+                color: white;
+                font-family: $poppins;
+                font-size: 14px;
 
-                li {
-                    padding-bottom: 20px;
+                ul {
+                    margin: 0;
+                    padding: 15px 40px;
+
+                    li {
+                        padding-bottom: 20px;
+                    }
                 }
-            }
+           }
         }
     }
 
+        /* Mobil services box */
+        @media only screen and (max-width: 1100px)  {
+            .services-section {
+                flex-direction: column;
+
+                .services-pair {
+                    margin: 0;
+    
+                    .services-box {
+                        margin: 0;
+                    }
+                }    
+            }
+        }
+
+        @media only screen and (max-width: 560px)  {
+            .services-section {
+                padding: 50px 0;
+                
+                .services-pair {
+                    flex-direction: column;
+
+                    .services-box {
+                        width: 80vw;
+                    }
+                }
+            }    
+        }
+
+    
     /*Feedback section */
     .feedback-section {
         background: $sort;
@@ -151,7 +189,6 @@ header {
         .kunde-box {
             width: 28vw;
             border-radius: 50px;
-            min-height: 270px;
             background: #FAFFC6;
             position: relative;
             margin-top: 150px;

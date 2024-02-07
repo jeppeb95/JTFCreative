@@ -16,6 +16,7 @@ h1 {
   margin: 0;
   margin-top: -10px;
   text-align: center;
+  z-index: 2;
 }
 
 h2 {
@@ -71,7 +72,7 @@ header ul li:hover .svg-klat {
   align-items: center;
 }
 .hero-section img {
-  width: 200px;
+  width: 20vw;
 }
 
 /*Adskiller*/
@@ -88,6 +89,7 @@ header ul li:hover .svg-klat {
   position: absolute;
   left: 20px;
   top: -100px;
+  z-index: 0;
 }
 
 /*Services section */
@@ -97,24 +99,51 @@ header ul li:hover .svg-klat {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 80px 0;
 }
-.services-section .services-box {
+.services-section .services-pair {
+  display: flex;
+  gap: 20px;
+}
+.services-section .services-pair .services-box {
   height: 350px;
   width: 250px;
   border: solid 2px #FCEC00;
-  margin: 100px 0;
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
-.services-section .services-box ul {
+.services-section .services-pair .services-box ul {
   margin: 0;
   padding: 15px 40px;
 }
-.services-section .services-box ul li {
+.services-section .services-pair .services-box ul li {
   padding-bottom: 20px;
 }
 
+/* Mobil services box */
+@media only screen and (max-width: 1100px) {
+  .services-section {
+    flex-direction: column;
+  }
+  .services-section .services-pair {
+    margin: 0;
+  }
+  .services-section .services-pair .services-box {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .services-section {
+    padding: 50px 0;
+  }
+  .services-section .services-pair {
+    flex-direction: column;
+  }
+  .services-section .services-pair .services-box {
+    width: 80vw;
+  }
+}
 /*Feedback section */
 .feedback-section {
   background: #080808;
@@ -131,7 +160,6 @@ header ul li:hover .svg-klat {
 .feedback-section .kunde-box {
   width: 28vw;
   border-radius: 50px;
-  min-height: 270px;
   background: #FAFFC6;
   position: relative;
   margin-top: 150px;
