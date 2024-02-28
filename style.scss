@@ -100,21 +100,27 @@ header {
 
 /*Hero styling */
 .hero-section {
-    height: 80vh;
     background-color: $sort;
-    width: 100%;
+    height: 380px;
     @include flex-center;
     align-items: center;
-    gap: 150px;
+    gap: 100px;
+    padding: 200px 0 200px 0;
+    margin-bottom: -2px;
 
     .hero-vector {
         height: 100%;
         display: flex;
         align-items: flex-end;
+        width: 600px;
+        position: relative;
 
         img {
-            height: 60vh;
+            height: 550px;
             right: 10vw;
+            position: absolute;
+            bottom: -200px;
+            right: 0;
         }
     }
 
@@ -165,63 +171,199 @@ header {
                 font-size: 16px;
 
             }
+
         }
     }
 }
 
+        /* Mobil hero section */
+        @media only screen and (max-width: 1325px)  {
+            .hero-section {
+                flex-direction: column;
+                padding-top: 150px;
+                height: 700px;
+                
+                    .hero-vector {
+                        height: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                        width: 600px;
+                        position: relative;
+                
+                        img {
+                            height: 550px;
+                            right: 10vw;
+                            position: absolute;
+                            bottom: -200px;
+                            right: 0;
 
 
-/*Adskiller*/
-    .adskiller-overskrift {
+                        }
+                    }
+                }
+            }
+
+        @media only screen and (max-width: 645px) {
+            .hero-section {
+                flex-direction: column;
+                padding-top: 150px;
+                height: 550px;
+        
+                .hero-vector {
+                    height: 300px;
+        
+                    img {
+                        height: 400px;
+                        left: 50%;
+                        transform: translate(-50%);
+
+                    }
+                }
+
+                .hero-content {
+                    width: 400px;
+
+                    h1 {
+                        font-size: 40px;
+                    }
+                }
+
+            }
+            
+        }
+        
+        @media only screen and (max-width: 460px) {
+            .hero-section {
+                height: 450px;
+        
+                .hero-vector {
+                    height: 280px;
+        
+                    img {
+                        height: 280px;
+                        left: 50%;
+                        transform: translate(-50%);
+
+                    }
+                }
+
+                .hero-content {
+                    width: 300px;
+                    @include flex-center;
+
+                    h1 {
+                        font-size: 35px;
+                    }
+
+                }
+        
+            }   
+        }
+
+
+
+/*Intro gul sektion*/
+    .intro-section {
         background: $gul;
-        height: 80px;
         @include flex-center;
         position: relative;
+        gap: 100px;
+        padding: 50px 0;
 
-        img {
+        #malerklat {
             width: 300px;
             position: absolute;
             left: 20px;
             top: -130px;
             z-index: 0;
         }
+
+        .intro-venstre, .intro-hojre {
+            width: 40vw;
+
+            #infografik {
+                width: 100%;
+            }
+
+            h3 {
+                font-weight: 300;
+            }
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+                
+            }
+
+            .liste-fordel {
+                display: flex;
+                gap: 30px;
+                padding-bottom: 20px;
+
+                img {
+                    width: 60px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .intro-section {
+            flex-direction: column-reverse;
+            gap: 20px;
+
+            .intro-venstre, .intro-hojre {
+                width: 90vw;
+        }
+    }
     }
 
     /*Services section */
     .services-section {
         background: $graa;
         @include flex-center;
+        flex-direction: column;
         gap: 20px;
-        padding: 80px 0;
-
-        .services-pair {
+        padding: 50px 0;
+    
+        .services-wrapper {
             display: flex;
             gap: 20px;
-        
+            padding-top: 60px;
 
-            .services-box {
-                height: 350px;
-                width: 250px;
-                border: solid 2px $gul;
-                color: white;
-                font-family: $poppins;
-                font-size: 14px;
-
-                ul {
-                    margin: 0;
-                    padding: 15px 40px;
-
-                    li {
-                        padding-bottom: 20px;
+            .services-pair {
+                display: flex;
+                gap: 20px;
+    
+                .services-box {
+                    height: 350px;
+                    width: 250px;
+                    border: solid 2px $gul;
+                    color: white;
+                    font-family: $poppins;
+                    font-size: 14px;
+    
+                    ul {
+                        margin: 0;
+                        padding: 15px 40px;
+    
+                        li {
+                            padding-bottom: 20px;
+                        }
                     }
                 }
-           }
+            }
+        }
+
+        h1 {
+            color: $gul;
         }
     }
+    
 
         /* Mobil services box */
         @media only screen and (max-width: 1100px)  {
-            .services-section {
+            .services-wrapper {
                 flex-direction: column;
 
                 .services-pair {
@@ -252,7 +394,7 @@ header {
     /*Feedback section */
     .feedback-section {
         background: $sort;
-        padding-bottom: 150px;
+        padding: 50px 0 150px 0;
         @include flex-center;
         flex-direction: column;
     
@@ -350,12 +492,295 @@ header {
             }
         }
     }
+
+
+        /*Styling af team sektionen */
+
+    .team-section{
+        display: flex;
+
     
+        .medlem-box {
+            width: 33.3vw;
+            position: relative;
+            margin-bottom: -10px;
+
+            > img {
+                width: 100%;
+                filter: brightness(50%);
+            }
+
+            .medlem-ramme {
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                > img {
+                    width: 300px;
+                }
+            }
+
+            .medlem-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 24px;
+                text-align: center;
+                color: white;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1315px) {
+        .team-section {
+            .medlem-box {
+                .medlem-ramme {
+                    top: 70%;
+                    img {
+                        width: 200px;
+                    }
+                }
+                .medlem-text {
+                    font-size: 18px;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 850px) {
+        .team-section {
+            flex-direction: column;
+            .medlem-box {
+                width: 100vw;
+                max-height: 700px;
+                .medlem-ramme {
+                    top: 80%;
+                    img {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 550px) {
+        .team-section {
+            .medlem-box {
+                .medlem-ramme {
+                    top: 70%;
+                    img {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 400px) {
+        .team-section {
+            .medlem-box {
+                .medlem-ramme {
+                    top: 70%;
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }    
+
+        /*Styling af cases sektionen */
+        .cases-section {
+            padding: 50px 0;
+            background: $gul;
+            @include flex-center;
+            flex-direction: column;
+            position: relative;
+        
+            .cases-wrapper {
+                @include flex-center;
+                gap: 50px;
+                padding: 50px 0 30px;
+        
+                .cases-container {
+                    width: 25vw;
+                    position: relative;
+        
+                    img {
+                        width: 100%;
+                    }
+
+                    #cases-logo {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 50%;
+                    }
+                }
+            }
+        
+            button {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                width: 300px;
+                height: 140px;
+                position: relative;
+                transition: transform 0.2s ease; 
+                background-image: url('img/svg/cases-knap.svg');
+                background-size: cover; 
+                background-repeat: no-repeat; 
+                background-position: center;
+                padding-bottom: 10px;
+        
+                &:hover {
+                    transform: scale(1.1);
+                }
+        
+                span {
+                    color: rgb(255, 255, 255);
+                    font-family: $poppins;
+                    font-weight: 800;
+                    font-size: 16px;
+                    position: relative;
+                    z-index: 1; 
+                }
+            }
+
+            .malerklat-cases-venstre {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .malerklat-cases-hojre {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        
+
+        @media only screen and (max-width: 1150px) {
+            .cases-section {
+                .cases-wrapper {
+                    flex-direction: column;
+                    gap: 0;
+
+                    .cases-container {
+                        width: 50vw;
+                    }
+                }
+
+                .malerklat-cases-venstre img, .malerklat-cases-hojre img{
+                    height: 200px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            .cases-section {
+                .cases-wrapper {
+                    .cases-container {
+                        width: 70vw;
+                    }
+                }
+
+                .malerklat-cases-venstre img, .malerklat-cases-hojre img{
+                    height: 100px;
+                }
+            }
+        }
+
+        /*Styling af kontakt sektionen */
+        .contact-section {
+            background: $graa;
+            padding: 50px 0;
+            display: flex;  
+            justify-content: center;      
+            color: white;
+            gap: 200px;
+
+            .contact-content {
+                width: 35vw;
+
+                p {
+                    width: 90%;
+                }
+            }
+
+            h3 {
+                font-weight: 300;
+            }
+
+            .contact-form {
+                form {
+                    input, textarea{
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 20px;
+                        background: transparent;
+                        border: 1px solid $gul;
+                        border-radius: 2px;
+
+                    }
+
+                    input::placeholder {
+                        color: rgb(204, 204, 204);
+                        font-family: $poppins;
+                    }
+
+                    textarea::placeholder {
+                        color: rgb(204, 204, 204);
+                        font-family: $poppins;
+                    }
+
+                    button {
+                        background: transparent;
+                border: none;
+                cursor: pointer;
+                width: 150px;
+                height: 70px;
+                position: relative;
+                transition: transform 0.2s ease; 
+                background-image: url('img/svg/gul-standard-knap.svg');
+                background-size: cover; 
+                background-repeat: no-repeat; 
+                background-position: center;
+                padding-bottom: 6px;
+        
+                &:hover {
+                    transform: scale(1.1);
+                }
+        
+                span {
+                    color: rgb(0, 0, 0);
+                    font-family: $poppins;
+                    font-weight: 800;
+                    font-size: 16px;
+                    position: relative;
+                    z-index: 1; 
+                }
+            }
+                    }
+
+
+                }
+            }
+        
+
+
+
 
         /*Styling af footer sektionen */
         footer {
             background: $sort;
             position: relative;
+            padding-top: 50px;
 
             .bar-wrapper {
                 @include flex-center;
@@ -401,15 +826,42 @@ header {
             .malerklat-footer-venstre{
                 position: absolute;
                 left: 0;
-                bottom: -7px;
+                bottom: 0px;
             }
 
             .malerklat-footer-hojre{
                 position: absolute;
                 right: 0;
-                bottom: -7px;
+                bottom: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 1300px)  {
+            .malerklat-footer-venstre img, .malerklat-footer-hojre img {
+                width: 200px;
+            }
+        }
+
+        @media only screen and (max-width: 795px)  {
+            footer {
+            .bar-wrapper {
+                flex-direction: column;
+                gap: 0px;
+                text-align: center;
             }
 
+            .malerklat-footer-venstre img, .malerklat-footer-hojre img {
+                width: 100px;
             
+            }
+
+            .copyright-line {
+                font-size: 10px;
+                padding-bottom: 50px;
+                white-space: nowrap;
+
+            }
 
         }
+    }
+
