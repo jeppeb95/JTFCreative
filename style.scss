@@ -704,75 +704,66 @@ header {
             justify-content: center;      
             color: white;
             gap: 200px;
-
+        
             .contact-content {
                 width: 35vw;
-
+        
                 p {
                     width: 90%;
                 }
             }
-
+        
             h3 {
                 font-weight: 300;
             }
-
+        
             .contact-form {
                 form {
-                    input, textarea{
+                    input, textarea {
                         width: 100%;
                         padding: 10px;
                         margin-bottom: 20px;
                         background: transparent;
                         border: 1px solid $gul;
                         border-radius: 2px;
-
+        
+                        &::placeholder {
+                            color: rgb(204, 204, 204);
+                            font-family: $poppins;
+                        }
                     }
-
-                    input::placeholder {
-                        color: rgb(204, 204, 204);
-                        font-family: $poppins;
-                    }
-
-                    textarea::placeholder {
-                        color: rgb(204, 204, 204);
-                        font-family: $poppins;
-                    }
-
+        
                     button {
                         background: transparent;
-                border: none;
-                cursor: pointer;
-                width: 150px;
-                height: 70px;
-                position: relative;
-                transition: transform 0.2s ease; 
-                background-image: url('img/svg/gul-standard-knap.svg');
-                background-size: cover; 
-                background-repeat: no-repeat; 
-                background-position: center;
-                padding-bottom: 6px;
-        
-                &:hover {
-                    transform: scale(1.1);
-                }
-        
-                span {
-                    color: rgb(0, 0, 0);
-                    font-family: $poppins;
-                    font-weight: 800;
-                    font-size: 16px;
-                    position: relative;
-                    z-index: 1; 
-                }
-            }
+                        border: none;
+                        cursor: pointer;
+                        width: 150px;
+                        height: 70px;
+                        position: relative;
+                        transition: transform 0.2s ease; 
+                        background-image: url('img/svg/gul-standard-knap.svg');
+                        background-size: cover; 
+                        background-repeat: no-repeat; 
+                        background-position: center;
+                        padding-bottom: 6px;
+                
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                
+                        span {
+                            color: rgb(0, 0, 0);
+                            font-family: $poppins;
+                            font-weight: 800;
+                            font-size: 16px;
+                            position: relative;
+                            z-index: 1; 
+                        }
                     }
-
-
                 }
             }
+        }
         
-
 
 
 

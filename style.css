@@ -597,19 +597,11 @@ header .header-logo {
   border: 1px solid #FCEC00;
   border-radius: 2px;
 }
-.contact-section .contact-form form input::-moz-placeholder {
+.contact-section .contact-form form input::-moz-placeholder, .contact-section .contact-form form textarea::-moz-placeholder {
   color: rgb(204, 204, 204);
   font-family: "Poppins", sans-serif;
 }
-.contact-section .contact-form form input::placeholder {
-  color: rgb(204, 204, 204);
-  font-family: "Poppins", sans-serif;
-}
-.contact-section .contact-form form textarea::-moz-placeholder {
-  color: rgb(204, 204, 204);
-  font-family: "Poppins", sans-serif;
-}
-.contact-section .contact-form form textarea::placeholder {
+.contact-section .contact-form form input::placeholder, .contact-section .contact-form form textarea::placeholder {
   color: rgb(204, 204, 204);
   font-family: "Poppins", sans-serif;
 }
