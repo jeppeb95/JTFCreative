@@ -38,6 +38,7 @@ header {
   align-items: center;
   height: 80px;
   background: #080808;
+  position: relative;
 }
 header ul {
   display: flex;
@@ -67,6 +68,12 @@ header ul li .svg-klat {
 header ul li:hover .svg-klat {
   opacity: 1;
 }
+header .header-logo {
+  position: absolute;
+  left: 30px;
+  z-index: 10;
+  top: 20px;
+}
 
 /*Hero styling */
 .hero-section {
@@ -76,9 +83,13 @@ header ul li:hover .svg-klat {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .hero-section img {
-  width: 20vw;
+  height: 60vh;
+  position: absolute;
+  bottom: 0;
+  right: 10vw;
 }
 
 /*Adskiller*/
