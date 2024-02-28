@@ -41,6 +41,10 @@ h2 {
     color: $gul;
 }
 
+h3 {
+    font-size: 26px;
+}
+
 /*Header styling*/
 
 header {
@@ -276,3 +280,65 @@ header {
         }
     }
     
+
+        /*Styling af footer sektionen */
+        footer {
+            background: $sort;
+            position: relative;
+
+            .bar-wrapper {
+                @include flex-center;
+                gap: 18vw;
+                color: white;
+
+                ul {
+                    padding: 0;
+
+                    li {
+                        list-style-type: none;
+                        line-height: 40px;
+                    
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+
+                        }
+                    }
+                }
+            }
+
+            .social-icons {
+                @include flex-center;
+                gap: 35px;
+                padding: 110px;
+
+                img {
+                    height: 70px;
+                }
+            }
+
+            .copyright-line {
+                color: white;
+                font-size: 13px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 8px;
+            }
+
+            .malerklat-footer-venstre{
+                position: absolute;
+                left: 0;
+                bottom: -7px;
+            }
+
+            .malerklat-footer-hojre{
+                position: absolute;
+                right: 0;
+                bottom: -7px;
+            }
+
+            
+
+        }

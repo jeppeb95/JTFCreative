@@ -27,6 +27,10 @@ h2 {
   color: #FCEC00;
 }
 
+h3 {
+  font-size: 26px;
+}
+
 /*Header styling*/
 header {
   display: flex;
@@ -234,4 +238,56 @@ header ul li:hover .svg-klat {
     width: 70vw;
     min-height: auto;
   }
+}
+
+/*Styling af footer sektionen */
+footer {
+  background: #080808;
+  position: relative;
+}
+footer .bar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18vw;
+  color: white;
+}
+footer .bar-wrapper ul {
+  padding: 0;
+}
+footer .bar-wrapper ul li {
+  list-style-type: none;
+  line-height: 40px;
+}
+footer .bar-wrapper ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 110px;
+}
+footer .social-icons img {
+  height: 70px;
+}
+footer .copyright-line {
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8px;
+}
+footer .malerklat-footer-venstre {
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
+footer .malerklat-footer-hojre {
+  position: absolute;
+  right: 0;
+  bottom: -7px;
 }/*# sourceMappingURL=style.css.map */
