@@ -68,7 +68,7 @@ header {
                 text-decoration: none;
                 color: $gul;
                 font-weight: 600;
-                font-size: 20px;
+                font-size: 22px;
             }
 
             .svg-klat {
@@ -99,20 +99,76 @@ header {
 
 
 /*Hero styling */
-    .hero-section {
-        height: 80vh;
-        background-color: $sort;
-        width: 100%;
-        @include flex-center;
-        position: relative;
+.hero-section {
+    height: 80vh;
+    background-color: $sort;
+    width: 100%;
+    @include flex-center;
+    align-items: center;
+    gap: 150px;
+
+    .hero-vector {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
 
         img {
             height: 60vh;
-            position: absolute;
-            bottom: 0;
             right: 10vw;
         }
     }
+
+    .hero-content {
+        width: 600px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            color: white;
+            text-align: left;
+            font-size: 50px;
+        }
+
+        /* Styling af knappen */
+        button {
+            background-color: transparent;
+            border: none;
+            height: 80px;
+            width: 340px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.2s ease; 
+            padding-bottom: 7px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+            
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+            }
+
+            span {
+                color: rgb(0, 0, 0);
+                position: relative; 
+                z-index: 3; 
+                font-family: $poppins;
+                font-weight: 800;
+                font-size: 16px;
+
+            }
+        }
+    }
+}
+
 
 
 /*Adskiller*/
@@ -329,7 +385,7 @@ header {
                 padding: 110px;
 
                 img {
-                    height: 70px;
+                    height: 60px;
                 }
             }
 

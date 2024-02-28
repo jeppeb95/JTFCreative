@@ -53,7 +53,7 @@ header ul li a {
   text-decoration: none;
   color: #FCEC00;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
 }
 header ul li .svg-klat {
   position: absolute;
@@ -83,13 +83,58 @@ header .header-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  align-items: center;
+  gap: 150px;
 }
-.hero-section img {
+.hero-section .hero-vector {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.hero-section .hero-vector img {
   height: 60vh;
-  position: absolute;
-  bottom: 0;
   right: 10vw;
+}
+.hero-section .hero-content {
+  width: 600px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* Styling af knappen */
+}
+.hero-section .hero-content h1 {
+  color: white;
+  text-align: left;
+  font-size: 50px;
+}
+.hero-section .hero-content button {
+  background-color: transparent;
+  border: none;
+  height: 80px;
+  width: 340px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s ease;
+  padding-bottom: 7px;
+}
+.hero-section .hero-content button:hover {
+  transform: scale(1.1);
+}
+.hero-section .hero-content button img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero-section .hero-content button span {
+  color: rgb(0, 0, 0);
+  position: relative;
+  z-index: 3;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
 }
 
 /*Adskiller*/
@@ -284,7 +329,7 @@ footer .social-icons {
   padding: 110px;
 }
 footer .social-icons img {
-  height: 70px;
+  height: 60px;
 }
 footer .copyright-line {
   color: white;
