@@ -11,6 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stick&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="overlay"></div>
+
+    <nav class="mobile-navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="cases.html">Cases</a></li>
+        <li><a href="omos.html">Om os</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <hr>
+      <div class="social-nav">
+        <a href="www.instagram.com/JTFcreative" target="_blank"><img src="img/svg/linkedin-sort.svg"></a>
+        <a href="www.facebook.com/JTFcreative" target="_blank"><img src="img/svg/square-facebook-sort.svg"></a>
+      </div>
+    </nav>
     <header>
         <div class="header-logo">
             <a href="index.html"><img src="img/svg/logo.svg" alt="JTF Creative logo"></a>
@@ -50,7 +73,7 @@
             </button>            
         </div>
         <div class="hero-vector">
-    <img src="img/midlertidig.png" alt="Vectorgrafik af os selv">
+    <img src="img/svg/tre.svg" alt="Vectorgrafik af os selv">
 </div>
     </section>
     <section class="intro-section">
@@ -257,7 +280,7 @@
     <section class="contact-section">
         <div class="contact-content">
             <h3>Vi skaber <b>unikke</b> designs</h3>
-            <p>Hos JTF Creations frygter vi ikke det atypiske og humoristiske i vores design, idet vi tror på, at kreativitet kommer i mange former og farver. Vi går ud over de gængse løsninger og skaber design, der afspejler vores kunders personlighed og virksomhedens karakter. <br><br>
+            <p>Hos JTF Creations frygter vi ikke det atypiske og humoristiske i vores design, idet vi tror på, at kreativitet kommer i mange former og farver.Vi går ud over de gængse løsninger og skaber design, der afspejler vores kunders personlighed og virksomhedens karakter. <br><br>
 
                 Vi er et lille bureau, men det giver os mulighed for at have en personlig tilgang til vores kunder. Vi er overbeviste om, at denne personlige tilgang er afgørende for at opbygge tillid med vores kunder, og det danner et stærkt fundament for et tilfredsstillende  slutprodukt.<br><br>
                 
@@ -351,6 +374,17 @@
                 <img src="img/svg/malerklat-footer-hojre.svg" alt="malerklat">
               </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        menuToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 
 </body>
 
