@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om os - JTF Creative</title>
+    <title>Kontakt - JTF Creative</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,52 +67,51 @@
     <main>
     <section class="headline-section">
         <div class="headline-container">
-            <h1>Om JTF Creative</h1>
-            <h4>Mød holdet bag succesen</h4>
-        </div>
-    </section>
-
-
-    <section class="team-section">
-        <div class="medlem-box">
-            <img src="img/tinus.png" alt="Foto af Tinus">
-            <div class="medlem-ramme"><img src="img/svg/ramme.svg">
-                <div class="medlem-text"><b>Tinus</b><br>Behr<br><b>Appudvikler<br>Designer</b></div>
-            </div>
-        </div>
-
-        <div class="medlem-box">
-            <img src="img/jeppe.png" alt="Foto af Tinus">
-            <div class="medlem-ramme"><img src="img/svg/ramme.svg">
-                <div class="medlem-text"><b>Jeppe</b><br>Birkholm<br><b>Webudvikler<br>Designer</b></div>
-            </div>
-        </div>
-
-        <div class="medlem-box">
-            <img src="img/frederik.png" alt="Foto af Tinus">
-            <div class="medlem-ramme"><img src="img/svg/ramme.svg">
-                <div class="medlem-text"><b>Frederik</b><br>Flagsted<br><b>Animator<br>SEO Ekspert</b></div>
-            </div>
+            <h1>Kontakt</h1>
+            <h4>Få en uforpligtende snak om dit projekt</h4>
         </div>
     </section>
 
 
     <section class="gul-section">
-        <div class="omos-wrapper">
-            <div class="omos-box">
-                <img src="img/svg/maling-adskiller-lille.svg" class="adskiller-top">
-                <img src="img/svg/paere.svg" alt="Illustration af lyspære" id="symbol">
-                <h2>Mission</h2>
-                <p class="upper-p">Vores mission hos JTF Creative er at hjælpe mindre og mellemstore virksomheder med at nå deres fulde digitale potentiale. Vi gør dette ved at tilbyde et bredt udvalg af kreative og innovative løsninger - fra webdesign og appudvikling til grafisk design og video produktion. Vi lægger stor vægt på bæredygtighed, social ansvarlighed og fuld transparens i vores arbejdsmetoder. Med et unikt, humoristisk, men alligevel professionelt udtryk, stræber vi efter at skabe produkter, der går udover kundens forvetninger.</p>
-                <img src="img/svg/maling-adskiller-lille.svg" class="adskiller-bund">
-            </div>
+        <h1>Kontakt os her</h1>
+        <img src="img/svg/maling-adskiller.svg" alt="Adskiller illustration" id="adskiller-kontakt">
+        <div class="kontakt-wrapper">
+            <div class="contact-content">
+                <p>Har du en idé, du gerne vil bringe til live, eller bare et spørgsmål om, hvad vi kan gøre for din virksomhed?<br> Vi hos JTF Creative er altid klar til en snak. Vi er her for at hjælpe dig med alt fra webdesign og appudvikling til grafisk design og videoproduktion.<br><br>
 
-            <div class="omos-box" id="omos-box2">
-                <img src="img/svg/maling-adskiller-lille.svg" class="adskiller-top" id="bund-adskilleren">
-                <img src="img/svg/oeje.svg" alt="Illustration af øje/vision" id="symbol2">
-                <h2>Vision</h2>
-                <p>Vores vision er at blive anerkendt som et førende digitalt bureau, der konstant skubber grænserne for kreativitet og innovation. Vi ønsker at skabe et stærkt brand, der er kendt for sin unikke blanding af professionalisme og humor, og som konstant leverer høj kvalitet og originale løsninger. Vi stræber efter at være et bureau, der ikke bare leverer tjenester, men som er en sand partner for vores kunder, der hjælper dem med at vokse og opnå deres målsætninger.</p>
-                <img src="img/svg/maling-adskiller-lille.svg" class="adskiller-bund">
+                    Lad os tage en uforpligtende snak om dine drømme og visioner. 
+                    Udfyld formularen, giv os et kald eller send en e-mail. <br><br>
+                    
+                    Vi glæder os til at høre fra dig!<br>
+                    </p>
+
+                    <div class="kontakt-info">
+                        <img src="img/svg/telefon-ikon.svg">
+                        +45 72 11 82 00
+                    </div>
+                    <div class="kontakt-info">
+                        <img src="img/svg/mail-ikon.svg">
+                        kontakt@jtfcreative.dk
+                    </div>
+            </div>
+    
+            <div class="contact-form">
+                <form action="/submit-form" method="post">
+                    <div>
+                        <input type="text" id="navn" name="navn" placeholder="Virksomhed/navn" required>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div>
+                        <input type="tel" id="telefon" name="telefon" placeholder="Kontaktnummer" required>
+                    </div>
+                    <div>
+                        <textarea id="besked" name="besked" rows="4" placeholder="Evt. Besked"></textarea>
+                    </div>
+                    <button type="submit"><span>Kontakt</span></button>
+                </form>
             </div>
         </div>
     </section>

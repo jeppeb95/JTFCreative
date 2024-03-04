@@ -15,12 +15,17 @@ $poppins: "Poppins", sans-serif;
     align-items: center;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
     font-family: $poppins;
     overflow-x: hidden;
+
 }
 
 /*Global text styling */
@@ -54,6 +59,8 @@ h4 {
     font-weight: 400;
     margin: 0;
     min-width: 400px;
+    white-space: nowrap;
+
 
 }
 
@@ -370,7 +377,7 @@ header {
         @include flex-center;
         flex-direction: column;
         gap: 20px;
-        padding: 50px 0;
+        padding: 35px 0;
     
         .services-wrapper {
             display: flex;
@@ -440,7 +447,7 @@ header {
     /*Feedback section */
     .feedback-section {
         background: $sort;
-        padding: 50px 0 150px 0;
+        padding: 35px 0 150px 0;
         @include flex-center;
         flex-direction: column;
     
@@ -644,7 +651,7 @@ header {
 
         /*Styling af cases sektionen */
         .cases-section {
-            padding: 50px 0;
+            padding: 35px 0;
             background: $gul;
             @include flex-center;
             flex-direction: column;
@@ -840,89 +847,7 @@ header {
 
 
 
-        /*Styling af footer sektionen */
-      footer {
-    background: $sort;
-    position: relative;
-    padding-top: 50px;
-
-    .bar-wrapper {
-        @include flex-center;
-        gap: 18vw;
-        color: white;
-
-        ul {
-            padding: 0;
-
-            li {
-                list-style-type: none;
-                line-height: 40px;
-
-                a {
-                    text-decoration: none;
-                    color: white;
-                }
-            }
-        }
-    }
-
-    .social-icons {
-        @include flex-center;
-        gap: 35px;
-        padding: 110px;
-
-        img {
-            height: 60px;
-        }
-    }
-
-    .copyright-line {
-        color: white;
-        font-size: 13px;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 8px;
-    }
-
-    .malerklat-footer-venstre {
-        position: absolute;
-        left: 0;
-        bottom: 0px;
-    }
-
-    .malerklat-footer-hojre {
-        position: absolute;
-        right: 0;
-        bottom: 0px;
-    }
-    
-    @media only screen and (max-width: 1300px) {
-        .malerklat-footer-venstre img,
-        .malerklat-footer-hojre img {
-            width: 200px;
-        }
-    }
-
-    @media only screen and (max-width: 795px) {
-        .malerklat-footer-venstre img,
-        .malerklat-footer-hojre img {
-            width: 100px;
-        }
-
-        .bar-wrapper {
-            flex-direction: column;
-            gap: 0px;
-            text-align: center;
-        }
-
-        .copyright-line {
-            font-size: 10px;
-            padding-bottom: 50px;
-            white-space: nowrap;
-        }
-    }
-}
+       
 
 /* Mobile navigation */
     .hamburger-menu {
@@ -1062,6 +987,10 @@ header {
     .hamburger-menu {
         display: none;
     }
+
+    .mobile-navbar {
+        display: none;
+    }
 }
 
 
@@ -1110,10 +1039,14 @@ header {
 
 /* Gul sektion */
 .gul-section {
-    padding: 70px 0;
+    padding: 35px 0;
     @include flex-center;
     flex-direction: column;
     background: $gul;
+
+    h1 {
+        white-space: normal;
+    }
 
     h2 {
         color: $graa;
@@ -1167,6 +1100,39 @@ header {
             width: 100%;
         }
     }
+    
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        width: 300px;
+        height: 140px;
+        position: relative;
+        transition: transform 0.2s ease; 
+        background-image: url('img/svg/cases-knap.svg');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center;
+        padding-bottom: 10px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        span {
+            color: $gul;
+            font-family: $poppins;
+            font-weight: 800;
+            font-size: 16px;
+            position: relative;
+            z-index: 1; 
+        }
+    }
+}
+
+#tekst-sektion {
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 
@@ -1225,6 +1191,13 @@ header {
     }
 }
 
+@media only screen and (max-width: 650px)  {
+    .gul-section {
+        padding-top: 25px
+    }
+}
+
+
 
 /*Styling af om-os*/
 .omos-wrapper {
@@ -1253,14 +1226,14 @@ header {
             padding-top: 10px;
         }
 
-        #adskiller-top {
+        .adskiller-top {
             width: 100%;
             position: absolute;
             top: 0;
         }
 
         
-        #adskiller-bund {
+        .adskiller-bund {
             width: 100%;
             position: absolute;
             bottom: 0;
@@ -1279,7 +1252,588 @@ header {
 @media only screen and (max-width: 1060px)  {
     .omos-wrapper {
         flex-direction: column;
-        gap: 10px;
+        gap: 0;
+
+        .omos-box {
+            width: 90vw;
+            height: auto;
+
+            #symbol, #symbol2 {
+                padding-top: 40px;
+            }
+
+           #symbol2 {
+                padding-top: 30px;
+            }
+
+
+            p {
+                padding-bottom: 40px;
+            }
+
+
+            #bund-adskilleren {
+                display: none;
+            }
+        }
     }
 
+}
+
+@media only screen and (min-width: 730px) and (max-width: 850px) {
+    .omos-wrapper {
+        padding-top: 110px;
+    }
+}
+
+
+/* cases styling */ 
+.case-section {
+    .case-wrapper {
+        .case-raekke {
+            display: flex;
+            margin: 0;
+            
+            .case-par {
+                display: flex;
+                
+                .case-item {
+                    position: relative;
+                    height: 50vh;
+                    width: 25vw;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.7);
+                        color: white; 
+                        @include flex-center;
+                        flex-direction: column;
+                        opacity: 0; 
+                        transition: opacity 0.3s;
+                        font-size: 20px;
+                        overflow-y: none;
+
+                        img {
+                            height: 30%;
+                            width: auto;
+                            max-width: 50%;
+                            object-fit: fill;
+                        }
+                        
+                        ul {
+                            padding: 0; 
+                        }
+                    }
+                    
+                    &:hover {
+                        .overlay {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .samarbejde-text {
+        width: 200px;
+    }
+
+    
+    
+    @media only screen and (max-width: 1080px) {
+        .case-wrapper {
+            .case-raekke {
+                flex-direction: column;
+                
+                .case-par {
+                    .case-item {
+                        width: 50vw;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 400px) {
+        .case-wrapper {
+            .case-raekke {
+                .case-par {
+                    .case-item {
+                        height: 35vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .case-section {
+    .case-wrapper {
+        .case-raekke {
+            .case-par {
+                flex-direction: column;
+                .case-item {
+                  width: 100vw;
+                }
+            }
+        }
+    }
+}
+}
+
+/* Kontakt side */
+#adskiller-kontakt {
+    width: 80vw;
+    padding: 10px;
+}
+.kontakt-wrapper {
+    display:  flex;
+    justify-content: center;
+    gap: 5vw;
+    padding-top: 30px;
+
+
+    > div {
+        width: 30vw;
+
+        > div {
+            display: flex;
+            gap: 6px;
+            padding-top: 8px;
+        }
+
+        button {
+            width: 180px;
+            height: 90px;
+        }
+
+
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px 0px 10px 10px;
+            margin-bottom: 10px;
+            background: transparent;
+            border: 1px solid $sort;
+            font-family: $poppins;
+
+            &::placeholder {
+                color: $graa;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+        .kontakt-wrapper {
+            flex-direction: column;
+            gap: 30px;
+
+            > div {
+                width: 78vw;
+            }
+        }
+
+}
+
+@media only screen and (max-width: 815px) {
+    #adskiller-kontakt {
+        width: 90vw;
+    }
+}
+
+
+/* Job og karriere side */
+.gul-section {
+    .job-wrapper {
+        width: 78vw;
+        padding-bottom: 75px;
+
+        h3 {
+            margin-bottom: 0;
+            font-size: 20px;
+            padding-bottom: 6px;
+        }
+
+        p {
+            margin: 0;
+            line-height: 28px;
+        }
+    }
+
+    .kultur-container {
+        display: flex;
+        gap: 4vw;
+
+        > div {
+            width: 37vw;
+
+            >img {
+                width: 100%;
+            }
+
+            > p {
+                padding-bottom: 30px;
+
+            }
+        }
+
+        .img-job-container {
+            @include flex-center;
+        }
+
+    }
+
+    .stilling-box {
+        position: relative;
+        width: 300px;
+
+        img {
+            width: 300px;
+        }
+
+        .stilling-content {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 30px;
+            display: flex;
+            flex-direction: column;
+
+            button {
+                width: 140px;
+                height: 50px;
+                color: $gul;
+                font-family: $poppins;
+                font-weight: 600;
+                left: 50px;
+            }
+
+            h5 {
+                margin: 0;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 18px;
+                padding-bottom: 8px;
+            }
+
+            
+        }
+    }
+    .job-container {
+        padding-top: 20px;
+        @include flex-center;
+        gap: 30px;
+    }
+    
+}
+
+@media only screen and (max-width: 1150px) {
+    .gul-section {
+            .kultur-container {
+                flex-direction: column;
+                gap: 0;
+                
+                > div {
+                    width: 78vw;
+                    
+                    > img {
+                        padding-bottom: 50px;
+                        margin-top: -50px;
+                    }
+                }
+            }
+    }
+}
+
+
+@media only screen and (max-width: 810px) {
+    .gul-section {
+        .job-wrapper {
+            width: 88vw;
+        }
+
+        .kultur-container {        
+            > div {
+                width: 88vw;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .gul-section {
+        .job-container {
+            flex-direction: column;
+        }
+    }
+}
+
+/*tilgang side */
+.gul-section {
+    .svg-wrapper {
+        padding-top: 30px;
+
+        .svg-par {
+            display: flex;
+            gap: 50px;
+
+            .svg-container {
+                position: relative;
+                width: 250px;
+                height: 250px;
+
+                .svg-ramme {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .svg-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+
+                    .titel {
+                        margin-bottom: 10px;
+                        margin-top: 0;
+                    }
+
+                    .ikon {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .gul-section {
+        .svg-wrapper {
+            .svg-par {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+}
+
+.magi-section {
+    background: $graa;
+    padding: 35px 0;
+    @include flex-center;
+    flex-direction: column;
+
+    h1 {
+        color: white;
+    }
+
+    .highlight1 {
+        color: $gul;
+    }
+
+    img {
+        width: 100px;
+        padding-top: 30px;
+    }
+
+    .tekst-container-roteret {
+        display: flex;
+        gap: 30vw;
+        padding: 0 30px 90px 30px;
+    }
+
+    .venstre-tekst, .hojre-tekst {
+        font-family: $overskrift;
+        font-size: 20px;
+    }
+
+    .venstre-tekst {
+        color: white;
+        transform: rotate(-15deg);
+    }
+
+    .hojre-tekst {
+        color: $gul;
+        transform: rotate(15deg);
+    }
+
+    .standard-tekst {
+        padding: 0 30px;
+    }
+
+    p {
+        color: white;
+        font-size: 18px;
+    }
+
+    .gul-tekst {
+        color: $gul;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .tekst-container-roteret {
+        gap: 50px;
+        padding-bottom: 30px;
+    }
+}
+
+#innovation-section {
+    background: $sort;
+    .tekst-container-roteret {
+        .venstre-tekst, .hojre-tekst {
+            transform: rotate(15deg);
+        }
+
+        .venstre-tekst {
+            color: $gul;
+        }
+
+        .hojre-tekst {
+            color: white;
+            transform: rotate(-15deg);
+        }
+    }
+}
+
+#visuel-section {
+    background: $gul;
+
+    h1, p {
+        color: $sort;
+    }
+
+    .venstre-tekst, .hojre-tekst {
+        transform: rotate(-15deg);
+    }
+}
+
+#kreativ-section {
+    .venstre-tekst, .hojre-tekst {
+        transform: rotate(15deg);
+    }
+}
+
+
+ /*Styling af footer sektionen */
+ footer {
+    background: $sort;
+    position: relative;
+    padding-top: 50px;
+
+    .bar-wrapper {
+        @include flex-center;
+        gap: 18vw;
+        color: white;
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                line-height: 40px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    transition: color 0.2s ease-in;
+
+                    &:hover {
+                        color: $gul;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        @include flex-center;
+        gap: 35px;
+        padding: 110px;
+
+        img {
+            height: 60px;
+        }
+    }
+
+    .copyright-line {
+        color: white;
+        font-size: 13px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 8px;
+    }
+
+    .malerklat-footer-venstre {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+
+        img {
+            margin-bottom: -7px;
+        }
+    }
+
+    .malerklat-footer-hojre {
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+
+        img {
+            margin-bottom: -7px;
+        }
+    }
+    
+    @media only screen and (max-width: 1300px) {
+        .malerklat-footer-venstre img,
+        .malerklat-footer-hojre img {
+            width: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 795px) {
+        .malerklat-footer-venstre img,
+        .malerklat-footer-hojre img {
+            width: 100px;
+        }
+
+        .bar-wrapper {
+            flex-direction: column;
+            gap: 0px;
+            text-align: center;
+        }
+
+        .copyright-line {
+            font-size: 10px;
+            padding-bottom: 50px;
+            white-space: nowrap;
+        }
+    }
 }
