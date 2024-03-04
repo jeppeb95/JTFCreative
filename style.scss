@@ -1701,11 +1701,14 @@ header {
 }
 
 @media only screen and (max-width: 500px) {
-    .tekst-container-roteret {
-        gap: 50px;
-        padding-bottom: 30px;
+    .magi-section {
+        .tekst-container-roteret {
+            gap: 50px;
+            padding-bottom: 30px;
+        }
     }
 }
+
 
 #innovation-section {
     background: $sort;
