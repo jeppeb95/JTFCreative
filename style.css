@@ -149,6 +149,7 @@ header .header-logo {
   color: white;
   text-align: left;
   font-size: 50px;
+  padding: 0;
 }
 .hero-section .hero-content button {
   background-color: transparent;
