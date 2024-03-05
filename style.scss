@@ -25,7 +25,6 @@ body {
     box-sizing: border-box; 
     font-family: $poppins;
     overflow-x: hidden;
-
 }
 
 /*Global text styling */
@@ -79,6 +78,70 @@ h4 {
     }
 }
 
+/* Global button styling */
+.custom-button {
+    background: transparent;
+    display: inline-block;
+    cursor: pointer;
+    width: 300px;
+    height: 140px;
+    position: relative;
+    transition: transform 0.2s ease; 
+    background-image: url('img/svg/cases-knap.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding-bottom: 10px;
+    text-align: center;
+    @include flex-center;
+    text-decoration: none;
+
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    span {
+        color: rgb(255, 255, 255);
+        font-family: $poppins;
+        font-weight: 800;
+        font-size: 16px;
+        position: relative;
+        z-index: 1; 
+        display: block; 
+        padding: 10px;
+    }
+}
+
+
+.submit-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 180px;
+    height: 80px;
+    position: relative;
+    transition: transform 0.2s ease; 
+    background-image: url('img/svg/gul-standard-knap.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding-bottom: 6px;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    span {
+        color: rgb(0, 0, 0);
+        font-family: $poppins;
+        font-weight: 800;
+        font-size: 16px;
+        position: relative;
+        z-index: 1; 
+    }
+}
 
 /*Header styling*/
 
@@ -684,34 +747,7 @@ header {
                 }
             }
         
-            button {
-                background: transparent;
-                border: none;
-                cursor: pointer;
-                width: 300px;
-                height: 140px;
-                position: relative;
-                transition: transform 0.2s ease; 
-                background-image: url('img/svg/cases-knap.svg');
-                background-size: cover; 
-                background-repeat: no-repeat; 
-                background-position: center;
-                padding-bottom: 10px;
-        
-                &:hover {
-                    transform: scale(1.1);
-                }
-        
-                span {
-                    color: rgb(255, 255, 255);
-                    font-family: $poppins;
-                    font-weight: 800;
-                    font-size: 16px;
-                    position: relative;
-                    z-index: 1; 
-                }
-            }
-
+            
             .malerklat-cases-venstre {
                 position: absolute;
                 left: 0;
@@ -794,36 +830,10 @@ header {
                             font-family: $poppins;
                         }
                     }
-        
-                    button {
-                        background: transparent;
-                        border: none;
-                        cursor: pointer;
-                        width: 150px;
-                        height: 70px;
-                        position: relative;
-                        transition: transform 0.2s ease; 
-                        background-image: url('img/svg/gul-standard-knap.svg');
-                        background-size: cover; 
-                        background-repeat: no-repeat; 
-                        background-position: center;
-                        padding-bottom: 6px;
-                
-                        &:hover {
-                            transform: scale(1.1);
-                        }
-                
-                        span {
-                            color: rgb(0, 0, 0);
-                            font-family: $poppins;
-                            font-weight: 800;
-                            font-size: 16px;
-                            position: relative;
-                            z-index: 1; 
-                        }
-                    }
                 }
             }
+
+            
         }
         
 
@@ -1105,33 +1115,6 @@ header {
         }
     }
     
-    button {
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        width: 300px;
-        height: 140px;
-        position: relative;
-        transition: transform 0.2s ease; 
-        background-image: url('img/svg/cases-knap.svg');
-        background-size: cover; 
-        background-repeat: no-repeat; 
-        background-position: center;
-        padding-bottom: 10px;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-
-        span {
-            color: $gul;
-            font-family: $poppins;
-            font-weight: 800;
-            font-size: 16px;
-            position: relative;
-            z-index: 1; 
-        }
-    }
 }
 
 #tekst-sektion {
@@ -1417,13 +1400,13 @@ header {
             gap: 6px;
             padding-top: 8px;
         }
+        .submit-button {
+        background-image: url('img/svg/sort-knap-lille.svg');
 
-        button {
-            width: 180px;
-            height: 90px;
+            span {
+                color: $gul;
+            }
         }
-
-
         
         input, textarea {
             width: 100%;
@@ -1521,13 +1504,17 @@ header {
             display: flex;
             flex-direction: column;
 
-            button {
+            .custom-button {
                 width: 140px;
                 height: 50px;
-                color: $gul;
                 font-family: $poppins;
-                font-weight: 600;
                 left: 50px;
+
+                span {
+                    color: $gul;
+                    font-weight: 600;
+                    font-size: 14px;
+                }
             }
 
             h5 {

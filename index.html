@@ -36,9 +36,11 @@
       </div>
     </nav>
     <header>
+        <nav class="main-nav">
         <div class="header-logo">
             <a href="index.html"><img src="img/svg/logo.svg" alt="JTF Creative logo"></a>
         </div>
+        <nav class="main-nav">
         <ul>
             <li>
                 <a href="index.html">Hjem</a>
@@ -60,7 +62,8 @@
                 <a href="kontakt.html">Kontakt</a>
                 <object class="svg-klat" type="image/svg+xml" data="img/svg/malerklat.svg">+</object>
             </li>
-        </ul>        
+        </ul>   
+    </nav>     
     </header>
 
     <main>
@@ -109,9 +112,8 @@
                     <div class="liste-fordel">
                         <img src="img/svg/besparelse.svg" alt="Illustration">
                         <p>
-                            <b>Effektivitet</b><br>
-                            Vi håndterer alle de tidskrævende opgaver, så du kan koncentrere dig om det, du gør bedst - at lede din virksomhed.
-                        </p>
+                            <b>Besparelser</b><br>
+                            Ved at samle alle dine behov under ét tag, sparer du både tid og penge.                        </p>
                     </div></li>
             </ul>
 
@@ -213,11 +215,10 @@
         </div>
         </div>
 
-        <a href="cases.html">
-            <button>
-                <span>Se alle vores projekter</span>
-            </button>
+        <a href="cases.html" class="custom-button">
+            <span>Se alle vores projekter</span>
         </a>
+        
 
         <div class="malerklat-cases-venstre">
             <img src="img/svg/malerklat-cases-venstre.svg">
@@ -304,7 +305,7 @@
                 <div>
                     <textarea id="besked" name="besked" rows="4" placeholder="Evt. Besked"></textarea>
                 </div>
-                <button type="submit"><span>Bestil</span></button>
+                <button type="submit" class="submit-button"><span>Bestil</span></button>
             </form>
         </div>
     </section>

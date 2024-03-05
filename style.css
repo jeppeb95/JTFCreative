@@ -56,6 +56,67 @@ h4 {
     font-size: 18px;
   }
 }
+/* Global button styling */
+.custom-button {
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+  width: 300px;
+  height: 140px;
+  position: relative;
+  transition: transform 0.2s ease;
+  background-image: url("img/svg/cases-knap.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.custom-button:hover {
+  transform: scale(1.1);
+}
+.custom-button span {
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 10px;
+}
+
+.submit-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 180px;
+  height: 80px;
+  position: relative;
+  transition: transform 0.2s ease;
+  background-image: url("img/svg/gul-standard-knap.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 6px;
+  text-decoration: none;
+}
+.submit-button:hover {
+  transform: scale(1.1);
+}
+.submit-button span {
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
 /*Header styling*/
 header {
   display: flex;
@@ -559,31 +620,6 @@ header .header-logo {
   transform: translate(-50%, -50%);
   width: 50%;
 }
-.cases-section button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  width: 300px;
-  height: 140px;
-  position: relative;
-  transition: transform 0.2s ease;
-  background-image: url("img/svg/cases-knap.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-bottom: 10px;
-}
-.cases-section button:hover {
-  transform: scale(1.1);
-}
-.cases-section button span {
-  color: rgb(255, 255, 255);
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  position: relative;
-  z-index: 1;
-}
 .cases-section .malerklat-cases-venstre {
   position: absolute;
   left: 0;
@@ -649,31 +685,6 @@ header .header-logo {
 .contact-section .contact-form form input::placeholder, .contact-section .contact-form form textarea::placeholder {
   color: rgb(204, 204, 204);
   font-family: "Poppins", sans-serif;
-}
-.contact-section .contact-form form button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  width: 150px;
-  height: 70px;
-  position: relative;
-  transition: transform 0.2s ease;
-  background-image: url("img/svg/gul-standard-knap.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-bottom: 6px;
-}
-.contact-section .contact-form form button:hover {
-  transform: scale(1.1);
-}
-.contact-section .contact-form form button span {
-  color: rgb(0, 0, 0);
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  position: relative;
-  z-index: 1;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -913,31 +924,6 @@ hr {
 .gul-section .maling-adskiller img {
   width: 100%;
 }
-.gul-section button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  width: 300px;
-  height: 140px;
-  position: relative;
-  transition: transform 0.2s ease;
-  background-image: url("img/svg/cases-knap.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-bottom: 10px;
-}
-.gul-section button:hover {
-  transform: scale(1.1);
-}
-.gul-section button span {
-  color: #FCEC00;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  position: relative;
-  z-index: 1;
-}
 
 #tekst-sektion {
   padding-left: 8%;
@@ -1160,9 +1146,11 @@ hr {
   gap: 6px;
   padding-top: 8px;
 }
-.kontakt-wrapper > div button {
-  width: 180px;
-  height: 90px;
+.kontakt-wrapper > div .submit-button {
+  background-image: url("img/svg/sort-knap-lille.svg");
+}
+.kontakt-wrapper > div .submit-button span {
+  color: #FCEC00;
 }
 .kontakt-wrapper > div input, .kontakt-wrapper > div textarea {
   width: 100%;
@@ -1243,13 +1231,16 @@ hr {
   display: flex;
   flex-direction: column;
 }
-.gul-section .stilling-box .stilling-content button {
+.gul-section .stilling-box .stilling-content .custom-button {
   width: 140px;
   height: 50px;
-  color: #FCEC00;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
   left: 50px;
+}
+.gul-section .stilling-box .stilling-content .custom-button span {
+  color: #FCEC00;
+  font-weight: 600;
+  font-size: 14px;
 }
 .gul-section .stilling-box .stilling-content h5 {
   margin: 0;
