@@ -1,21 +1,10 @@
-/* Farve variabler */
-$gul: #FCEC00;
-$sort: #080808;
-$graa: #1C1C1C;
-
-/* Font variabler */
-$overskrift: "Stick", sans-serif;
-$poppins: "Poppins", sans-serif;
+@import 'partials/mixin';
+@import 'partials/colors';
+@import 'partials/fonts';
+@import 'partials/buttons';
 
 
-/*Poisition variabler */
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  html {
+html {
     scroll-behavior: smooth;
   }
 
@@ -27,43 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-/*Global text styling */
-h1 {
-    font-family: #{$overskrift};
-    font-size: 40px;
-    padding: 0;
-    margin: 0;
-    margin-top: -10px;
-    text-align: center;
-    z-index: 2;
-    padding: 0 20px;
 
-}
-
-
-h2 {
-    font-family: #{$overskrift};
-    font-size: 26px;
-    text-align: center;
-    font-weight: 200;
-    color: $gul;
-}
-
-h3 {
-    font-size: 26px;
-}
-
-h4 {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 400;
-    margin: 0;
-    min-width: 400px;
-    white-space: nowrap;
-
-
-
-}
 
 @media only screen and (max-width: 450px)  {
     h1 {
@@ -78,70 +31,6 @@ h4 {
     }
 }
 
-/* Global button styling */
-.custom-button {
-    background: transparent;
-    display: inline-block;
-    cursor: pointer;
-    width: 300px;
-    height: 140px;
-    position: relative;
-    transition: transform 0.2s ease; 
-    background-image: url('img/svg/cases-knap.svg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center;
-    padding-bottom: 10px;
-    text-align: center;
-    @include flex-center;
-    text-decoration: none;
-
-
-    &:hover {
-        transform: scale(1.1);
-    }
-
-    span {
-        color: rgb(255, 255, 255);
-        font-family: $poppins;
-        font-weight: 800;
-        font-size: 16px;
-        position: relative;
-        z-index: 1; 
-        display: block; 
-        padding: 10px;
-    }
-}
-
-
-.submit-button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    width: 180px;
-    height: 80px;
-    position: relative;
-    transition: transform 0.2s ease; 
-    background-image: url('img/svg/gul-standard-knap.svg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center;
-    padding-bottom: 6px;
-    text-decoration: none;
-
-    &:hover {
-        transform: scale(1.1);
-    }
-
-    span {
-        color: rgb(0, 0, 0);
-        font-family: $poppins;
-        font-weight: 800;
-        font-size: 16px;
-        position: relative;
-        z-index: 1; 
-    }
-}
 
 /*Header styling*/
 

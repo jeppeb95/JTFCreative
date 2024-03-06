@@ -1,19 +1,7 @@
 @charset "UTF-8";
+/*Poisition variabler */
 /* Farve variabler */
 /* Font variabler */
-/*Poisition variabler */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-}
-
 /*Global text styling */
 h1 {
   font-family: Stick, sans-serif;
@@ -47,16 +35,6 @@ h4 {
   white-space: nowrap;
 }
 
-@media only screen and (max-width: 450px) {
-  h1 {
-    font-size: 32px;
-  }
-}
-@media only screen and (max-width: 770px) {
-  h4 {
-    font-size: 18px;
-  }
-}
 /* Global button styling */
 .custom-button {
   background: transparent;
@@ -118,6 +96,28 @@ h4 {
   z-index: 1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  h4 {
+    font-size: 18px;
+  }
+}
 /*Header styling*/
 header {
   display: flex;
