@@ -171,7 +171,8 @@ header .header-logo {
     transform: translate(-50%);
   }
   header .header-logo img {
-    transform: scale(0.9);
+    transform: scale(0.8);
+    margin-top: -15px;
   }
 }
 /*Hero styling */
@@ -183,7 +184,7 @@ header .header-logo {
   align-items: center;
   align-items: center;
   gap: 100px;
-  padding: 120px 0 200px 0;
+  padding: 120px 0 20px 0;
   margin-bottom: -2px;
 }
 .hero-section .hero-vector {
@@ -194,11 +195,12 @@ header .header-logo {
   position: relative;
 }
 .hero-section .hero-vector img {
-  height: 550px;
+  height: 450px;
   right: 10vw;
   position: absolute;
-  bottom: -200px;
+  bottom: -20px;
   right: 0;
+  z-index: 2;
 }
 .hero-section .hero-content {
   width: 600px;
@@ -247,8 +249,8 @@ header .header-logo {
 @media only screen and (max-width: 1325px) {
   .hero-section {
     flex-direction: column;
-    padding-top: 150px;
-    height: 700px;
+    padding-top: 110px;
+    height: 800px;
   }
   .hero-section .hero-vector {
     height: 100%;
@@ -258,22 +260,19 @@ header .header-logo {
     width: auto;
   }
   .hero-section .hero-vector img {
-    bottom: -200px;
     left: 50%;
     transform: translate(-50%);
   }
 }
 @media only screen and (max-width: 645px) {
   .hero-section {
-    flex-direction: column;
-    padding-top: 150px;
-    height: 550px;
+    height: 750px;
   }
   .hero-section .hero-vector {
     height: 300px;
   }
   .hero-section .hero-vector img {
-    height: 400px;
+    height: 300px;
     left: 50%;
     transform: translate(-50%);
   }
@@ -286,7 +285,7 @@ header .header-logo {
 }
 @media only screen and (max-width: 460px) {
   .hero-section {
-    height: 450px;
+    height: 670px;
   }
   .hero-section .hero-vector {
     height: 280px;
@@ -303,7 +302,7 @@ header .header-logo {
     align-items: center;
   }
   .hero-section .hero-content h1 {
-    font-size: 35px;
+    font-size: 32px;
   }
 }
 /*Intro gul sektion*/
@@ -320,7 +319,7 @@ header .header-logo {
   width: 300px;
   position: absolute;
   left: 20px;
-  top: -130px;
+  top: -80px;
   z-index: 0;
 }
 .intro-section .intro-venstre, .intro-section .intro-hojre {
@@ -356,7 +355,13 @@ header .header-logo {
   .intro-section > img {
     transform: scale(0.5);
     left: -70px;
-    top: -90px;
+    top: -60px;
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .intro-section > img {
+    left: -140px;
   }
 }
 /*Services section */

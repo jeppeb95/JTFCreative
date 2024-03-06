@@ -206,7 +206,8 @@ header {
             transform: translate(-50%);
 
             img {
-                transform: scale(0.9);
+                transform: scale(0.8);
+                margin-top: -15px;
             }
         }
     }
@@ -221,7 +222,7 @@ header {
     @include flex-center;
     align-items: center;
     gap: 100px;
-    padding: 120px 0 200px 0;
+    padding: 120px 0 20px 0;
     margin-bottom: -2px;
 
     .hero-vector {
@@ -232,11 +233,12 @@ header {
         position: relative;
 
         img {
-            height: 550px;
+            height: 450px;
             right: 10vw;
             position: absolute;
-            bottom: -200px;
+            bottom: -20px;
             right: 0;
+            z-index: 2;
         }
     }
 
@@ -297,8 +299,8 @@ header {
         @media only screen and (max-width: 1325px)  {
             .hero-section {
                 flex-direction: column;
-                padding-top: 150px;
-                height: 700px;
+                padding-top: 110px;
+                height: 800px;
                 
                     .hero-vector {
                         height: 100%;
@@ -306,9 +308,7 @@ header {
                         align-items: flex-end;
                         position: relative;
                         width: auto;
-                
                         img {
-                            bottom: -200px;
                             left: 50%;
                             transform: translate(-50%);
 
@@ -320,15 +320,13 @@ header {
 
         @media only screen and (max-width: 645px) {
             .hero-section {
-                flex-direction: column;
-                padding-top: 150px;
-                height: 550px;
+                height: 750px;
         
                 .hero-vector {
                     height: 300px;
         
                     img {
-                        height: 400px;
+                        height: 300px;
                         left: 50%;
                         transform: translate(-50%);
 
@@ -349,7 +347,7 @@ header {
         
         @media only screen and (max-width: 460px) {
             .hero-section {
-                height: 450px;
+                height: 670px;
         
                 .hero-vector {
                     height: 280px;
@@ -367,7 +365,7 @@ header {
                     @include flex-center;
 
                     h1 {
-                        font-size: 35px;
+                        font-size: 32px;
                     }
 
                 }
@@ -389,7 +387,7 @@ header {
             width: 300px;
             position: absolute;
             left: 20px;
-            top: -130px;
+            top: -80px;
             z-index: 0;
         }
 
@@ -433,10 +431,20 @@ header {
     > img {
         transform: scale(0.5);
         left: -70px;
-        top: -90px;
+        top: -60px;
+        z-index: 1;
     }
     }
     }
+
+    @media only screen and (max-width: 1000px) {
+        .intro-section {
+            > img {
+                left: -140px;
+            }
+        }
+    }
+
 
     /*Services section */
     .services-section {
