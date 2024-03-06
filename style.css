@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Farve variabler */
 /* Font variabler */
 /*Poisition variabler */
@@ -842,6 +843,7 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 130px 0 50px 0;
+  position: relative;
 }
 .headline-section .headline-container {
   width: 45%;
@@ -858,11 +860,38 @@ hr {
 .headline-section .headline-container h1 {
   -webkit-text-stroke: 3px #080808;
 }
+.headline-section .breadcrumb {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+.headline-section .breadcrumb li {
+  display: inline;
+  font-size: 14px;
+}
+.headline-section .breadcrumb li + li:before {
+  color: rgb(203, 203, 203);
+  content: "/ ";
+}
+.headline-section .breadcrumb li a {
+  color: rgb(203, 203, 203);
+  text-decoration: none;
+  font-size: 12px;
+  text-decoration: none;
+}
+.headline-section .breadcrumb li a:hover {
+  color: #FCEC00;
+}
 
 @media only screen and (max-width: 630px) {
   .headline-section .headline-container {
     width: 90vw;
     padding: 20px;
+  }
+  .headline-section .breadcrumb {
+    display: none;
   }
 }
 @media only screen and (max-width: 433px) {

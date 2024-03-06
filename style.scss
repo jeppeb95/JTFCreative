@@ -1013,6 +1013,7 @@ header {
     background: $sort;
     @include flex-center;
     padding: 130px 0 50px 0;
+    position: relative;
 
     .headline-container {
         width: 45%;
@@ -1028,6 +1029,35 @@ header {
             -webkit-text-stroke: 3px $sort;
         }
     }
+
+    .breadcrumb {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        left: 10px;
+        bottom: 0;
+      }
+      
+      .breadcrumb li {
+        display: inline;
+        font-size: 14px;
+      }
+      
+      .breadcrumb li+li:before {
+        color: rgb(203, 203, 203);
+        content: "/\00a0";
+      }
+      
+      .breadcrumb li a {
+        color: rgb(203, 203, 203);
+        text-decoration: none;
+        font-size: 12px;
+        text-decoration: none;
+      }
+      
+      .breadcrumb li a:hover {
+        color: $gul;
+      }
 }
 
 @media only screen and (max-width: 630px)  {
@@ -1035,6 +1065,10 @@ header {
         .headline-container {
             width: 90vw;
             padding: 20px;            
+        }
+
+        .breadcrumb {
+            display: none;
         }
         }
 }
