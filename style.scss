@@ -560,12 +560,12 @@ header {
                 bottom: 0;
             }
     
-            #citation1 {
+            .citation1 {
                 position: absolute;
                 top: 25px;
             }
     
-            #citation2 {
+            .citation2 {
                 position: absolute;
                 right: 15px;
                 bottom: 40px;
@@ -719,7 +719,7 @@ header {
                         width: 100%;
                     }
 
-                    #cases-logo {
+                    .cases-logo {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -1187,7 +1187,7 @@ header {
             }
         }
 
-        #reverse-box {
+        #reverse-box, #reverse-box2 {
             flex-direction: column-reverse;
         }
 

@@ -470,11 +470,11 @@ header .header-logo {
   left: 50%;
   bottom: 0;
 }
-.feedback-section .kunde-box #citation1 {
+.feedback-section .kunde-box .citation1 {
   position: absolute;
   top: 25px;
 }
-.feedback-section .kunde-box #citation2 {
+.feedback-section .kunde-box .citation2 {
   position: absolute;
   right: 15px;
   bottom: 40px;
@@ -599,7 +599,7 @@ header .header-logo {
 .cases-section .cases-wrapper .cases-container img {
   width: 100%;
 }
-.cases-section .cases-wrapper .cases-container #cases-logo {
+.cases-section .cases-wrapper .cases-container .cases-logo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -984,7 +984,7 @@ hr {
   .gul-section .box-content-container > div {
     width: 80vw;
   }
-  .gul-section #reverse-box {
+  .gul-section #reverse-box, .gul-section #reverse-box2 {
     flex-direction: column-reverse;
   }
 }
