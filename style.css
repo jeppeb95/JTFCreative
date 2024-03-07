@@ -1167,10 +1167,10 @@ hr {
   background-image: url("img/svg/sort-knap-lille.svg");
 }
 .kontakt-wrapper > div .submit-button span {
-  color: #FCEC00;
+  color: white;
 }
 .kontakt-wrapper > div input, .kontakt-wrapper > div textarea {
-  width: 100%;
+  width: 95%;
   padding: 10px 0px 10px 10px;
   margin-bottom: 10px;
   background: transparent;
