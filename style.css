@@ -283,6 +283,7 @@ header .header-logo {
   }
   .hero-section .hero-content h1 {
     font-size: 32px;
+    width: 100%;
   }
 }
 /*Intro gul sektion*/
