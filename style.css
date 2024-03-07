@@ -276,7 +276,7 @@ header .header-logo {
     transform: translate(-50%);
   }
   .hero-section .hero-content {
-    width: 300px;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -492,7 +492,7 @@ header .header-logo {
     flex-direction: column;
   }
   .feedback-section .kunde-box {
-    width: 70vw;
+    width: 80vw;
     min-height: auto;
   }
   .feedback-section .kunde-box-wrapper > :nth-child(3) {
@@ -680,13 +680,16 @@ header .header-logo {
     gap: 20px;
   }
   .contact-section .contact-content {
-    width: 80vw;
+    width: 90vw;
   }
   .contact-section .contact-content p {
     width: 100%;
   }
   .contact-section .contact-form {
-    width: 80vw;
+    width: 90vw;
+  }
+  .contact-section .contact-form form input, .contact-section .contact-form form textarea {
+    width: 95%;
   }
 }
 /* Mobile navigation */
@@ -932,7 +935,7 @@ hr {
   display: block;
 }
 .gul-section .maling-adskiller {
-  width: 85vw;
+  width: 90vw;
   padding: 35px 0;
 }
 .gul-section .maling-adskiller img {
@@ -940,8 +943,8 @@ hr {
 }
 
 #tekst-sektion {
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /* Gul sektion -> indhold */
@@ -982,7 +985,7 @@ hr {
     gap: 0;
   }
   .gul-section .box-content-container > div {
-    width: 80vw;
+    width: 90vw;
   }
   .gul-section #reverse-box, .gul-section #reverse-box2 {
     flex-direction: column-reverse;
@@ -1142,8 +1145,8 @@ hr {
 }
 /* Kontakt side */
 #adskiller-kontakt {
-  width: 80vw;
-  padding: 10px;
+  width: 90vw;
+  padding: 10px 0;
 }
 
 .kontakt-wrapper {
@@ -1190,7 +1193,7 @@ hr {
     gap: 30px;
   }
   .kontakt-wrapper > div {
-    width: 78vw;
+    width: 90vw;
   }
 }
 @media only screen and (max-width: 815px) {
@@ -1287,7 +1290,7 @@ hr {
 }
 @media only screen and (max-width: 810px) {
   .gul-section .job-wrapper {
-    width: 88vw;
+    width: 90vw;
   }
   .gul-section .kultur-container > div {
     width: 88vw;

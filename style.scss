@@ -210,7 +210,7 @@ header {
                 }
 
                 .hero-content {
-                    width: 300px;
+                    width: 90vw;
                     @include flex-center;
 
                     h1 {
@@ -464,7 +464,7 @@ header {
             }
         
             .kunde-box {
-                width: 70vw;
+                width: 80vw;
                 min-height: auto;
             }
         
@@ -701,7 +701,7 @@ header {
                 gap: 20px;
 
                 .contact-content {
-                    width: 80vw;
+                    width: 90vw;
 
                     p {
                         width: 100%;
@@ -709,7 +709,13 @@ header {
                 }
 
                 .contact-form {
-                    width: 80vw;
+                    width: 90vw;
+                    form {
+                        input, textarea {
+                            width: 95%;
+                        }
+                    }
+
                 }
             }
 
@@ -998,7 +1004,7 @@ header {
     }
 
     .maling-adskiller {
-        width: 85vw;
+        width: 90vw;
         padding: 35px 0;
 
         img {
@@ -1009,8 +1015,8 @@ header {
 }
 
 #tekst-sektion {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 
@@ -1058,7 +1064,7 @@ header {
             gap: 0;
 
             > div {
-                width: 80vw;
+                width: 90vw;
             }
         }
 
@@ -1273,8 +1279,8 @@ header {
 
 /* Kontakt side */
 #adskiller-kontakt {
-    width: 80vw;
-    padding: 10px;
+    width: 90vw;
+    padding: 10px 0;
 }
 .kontakt-wrapper {
     display:  flex;
@@ -1325,7 +1331,7 @@ header {
             gap: 30px;
 
             > div {
-                width: 78vw;
+                width: 90vw;
             }
         }
 
@@ -1451,7 +1457,7 @@ header {
 @media only screen and (max-width: 810px) {
     .gul-section {
         .job-wrapper {
-            width: 88vw;
+            width: 90vw;
         }
 
         .kultur-container {        
