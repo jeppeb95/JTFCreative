@@ -848,6 +848,7 @@ hr {
 }
 .headline-section .headline-container h1 {
   -webkit-text-stroke: 3px #080808;
+  white-space: nowrap;
 }
 .headline-section .breadcrumb {
   list-style: none;
